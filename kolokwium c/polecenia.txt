@@ -1,0 +1,43 @@
+Czas pracy: 70 min
+Kod programu proszę przysłać na adres: przemyslaw.raczynski@smcebi.edu.pl
+
+Zadanie 1.
+Napisz program wykonujący potęgowanie. Program wczytuje dwie liczby, podstawę i wykładnik 
+potęgi, a następnie oblicza i wyświetla na ekran monitora wynik potęgowania. 
+UWAGA! Punktowane będą tylko rozwiązania rekurencyjne.
+
+Zadanie 2.
+Każdą liczbę całkowitą dodatnią n możemy zapisać jako sumę różnych potęg liczby 2. 
+Przykład: 
+11 = 1 + 2 + 8 = 2^0 + 2^1 + 2^3 
+18 = 2 + 16 = 2^1 + 2^4
+Napisz program obliczający liczbę różnych potęg liczby 2, których suma jest równa danej 
+liczbie n. Twój algorytm powinien być zgodny z poniższą specyfikacją. 
+Uwaga: W zapisie możesz wykorzystać operacje dodawania, odejmowania, mnożenia, 
+dzielenia, dzielenia całkowitego i dzielenia zresztą (modulo - %), lub samodzielnie napisane 
+funkcje. 
+Specyfikacja algorytmu: 
+Dane: 
+n – dodatnia liczba całkowita 
+Wynik: 
+lp – liczba różnych potęg liczby 2, których suma daje liczbę n 
+Przykład: 
+Dla n = 18 wynikiem jest lp = 2.
+
+Zadanie 3.
+Dwie różne liczby całkowite a i b większe od 1 nazwiemy skojarzonymi, jeśli suma 
+wszystkich różnych dodatnich dzielników a mniejszych od a jest równa b+1, a suma 
+wszystkich różnych dodatnich dzielników b mniejszych od b jest równa a+1. 
+Skojarzone są np. liczby 140 i 195, ponieważ: 
+a) dzielnikami 140 są 1, 2, 4, 5, 7, 10, 14, 20, 28, 35, 70, a ich suma wynosi 
+196 = 195+1. 
+b) dzielnikami 195 są 1, 3, 5, 13, 15, 39, 65, a suma tych liczb równa jest 141 = 140+1.
+Dana jest liczba całkowita a większa od 1. Napisz program, który znajdzie i wypisze liczbę b 
+skojarzoną z a lub komunikat „NIE”, jeśli taka liczba nie istnieje. 
+W zapisie algorytmu możesz korzystać tylko z następujących operacji arytmetycznych: 
+dodawania, odejmowania, mnożenia, dzielenia całkowitego i obliczania reszty z dzielenia. 
+Specyfikacja: 
+Dane: 
+Liczba całkowita a > 1. 
+Wynik: 
+Liczba całkowita b skojarzona z a lub komunikat „NIE”, jeśli taka liczba nie istnieje.
