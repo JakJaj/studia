@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jakubjajonek/Developer/VSCode/Studia/C/kursC/Zajecia3/zadanie4.0'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _nwd, symObjAddr: 0x0, symBinAddr: 0x100003DBC, symSize: 0xB8 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _nwd, symObjAddr: 0x0, symBinAddr: 0x100003DBC, symSize: 0xB8 }
+  - { offsetInCU: 0xA1, offset: 0xA1, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB8, symBinAddr: 0x100003E74, symSize: 0x10C }
+...
