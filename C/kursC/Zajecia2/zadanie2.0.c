@@ -31,10 +31,6 @@ int main(void)
         exit(1);
       }
       
-       
-      
-      
-
     // w przypadku dzielenia trzeba sprawdzić czy
     // argument y jest niezerowy:
       
