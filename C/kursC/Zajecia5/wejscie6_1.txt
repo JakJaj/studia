@@ -1,0 +1,24 @@
+2
+2.8767 5.9843
+2.5321 7.2012
+
+
+
+    while (*source != '\0') {
+        if (*source == delim) {
+            source++; // Pominięcie znaku delim
+            break;
+        }
+        *first++ = *source++;
+    }
+    *first = '\0';
+
+    if (*source == '\0') {
+        *second = '\0';
+    } else {
+        while (*source != '\0') {
+            *second++ = *source++;
+        }
+        *second = '\0';
+    }
+}
