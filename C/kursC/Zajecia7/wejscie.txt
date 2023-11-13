@@ -1,0 +1,4 @@
+3
+lista.txt 26
+lista.txt 55
+nieistniejacy_plik.txt 4
