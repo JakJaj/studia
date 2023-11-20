@@ -1,0 +1,6 @@
+5
+push_back 7
+push_back 11
+pop_front
+pop_front
+pop_front
