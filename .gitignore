@@ -305,5 +305,5 @@ pyrightconfig.json
 
 sign_mnist/
 
-logs/fit
+logs/fit/
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,c,visualstudiocode
