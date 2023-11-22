@@ -1,6 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,python,java,c,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,java,c,visualstudiocode
-
 ### C ###
 # Prerequisites
 *.d
@@ -304,6 +301,6 @@ pyrightconfig.json
 .ionide
 
 sign_mnist/
-
 logs/fit/
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,c,visualstudiocode
+

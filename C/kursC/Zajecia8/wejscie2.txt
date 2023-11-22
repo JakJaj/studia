@@ -1,0 +1,3 @@
+2
+push_back 11
+push_front -12
