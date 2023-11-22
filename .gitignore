@@ -303,4 +303,5 @@ pyrightconfig.json
 .history
 .ionide
 
+sign_mnist/
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,c,visualstudiocode
