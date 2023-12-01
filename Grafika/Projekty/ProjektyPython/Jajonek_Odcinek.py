@@ -1,7 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def bresenham(xp,yp,xk,yk,data):
+def bresenham(xp:int,yp:int,xk:int,yk:int,data:np.array) -> np.array:
+    """
+        Funkcja rysujaca linie za pomoca algorytmu breshenhama
+    Args:
+        xp (int): Wspolrzedna x punktu poczatkowego
+        yp (int): Wspolrzedna y punktu poczatkowego
+        xk (int): Wspolrzedna x punktu koncowego
+        yk (int): Wspolrzedna y punktu koncowego
+        data (np.Array): Tablica RGB na ktorej zamieszczona bedzie linia
+
+    Returns:
+        np.Array: Tablica RGB na ktorej zamieszczona zostala linia
+    """
     assert xp < data.shape[0] and xp > 0, "Niewlasciwa wartosci x poczatkowego"
     assert xk < data.shape[0] and xk > 0, "Niewlasciwa wartosci x koncowego"
     assert yp < data.shape[1] and yp > 0, "Niewlasciwa wartosci y poczatkowego"
@@ -91,6 +103,5 @@ data.fill(255)
 P1 = [20,80]
 P2 = [10,30]
 linePZ(P1,P2,11,data)
-
 plt.imshow(data,interpolation='none')
 plt.show()
