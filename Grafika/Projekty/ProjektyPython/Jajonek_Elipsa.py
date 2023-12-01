@@ -52,7 +52,7 @@ def elipse(n:int, m:int, O:list, a:int, b:int, fill:int = 1) -> np.array:
     return RGB
 
 
-data = elipse(400,400, [200,200], 150, 100 , 1)
+data = elipse(400,400, [200,200], 150, 100 , 0)
 plt.imshow(data, interpolation='none', aspect=1)
 plt.show()
 plt.imsave('test.png', data, format='png')
