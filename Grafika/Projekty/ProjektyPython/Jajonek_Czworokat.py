@@ -134,10 +134,10 @@ def quadrilateral(n:int, m:int, P1:list, P2:list, P3:list, P4:list, fill=0) -> n
     Funkcja rysujaca czworokat na polu o podanych wymiarach [n x m].
     O punktach kolejnk: P1, P2, P3 i P4, zawierajace wspolrzedne tych punktow
     Z mozliwoscia rysowania czworokatu z oraz bez wypelnienia.
-    
+    Jezeli krawedzie czworokata sie przecinaja to zwracana jest tablica RGB wypelniona czarnym kolorem
     Args:
-        n (int): szerokosc zwracanej tablicy RGB
-        m (int): wysokosc zwracanej tablicy RGB
+        n (int): szerokosc zwracanej tablicy rgb
+        m (int): wysokosc zwracanej tablicy rgb
         P1 (list): wspolrzedne punktu P1
         P2 (list): wspolrzedne punktu P2
         P3 (list): wspolrzedne punktu P3
@@ -146,7 +146,7 @@ def quadrilateral(n:int, m:int, P1:list, P2:list, P3:list, P4:list, fill=0) -> n
         Dla wartosci 1 rysowana jest wypelniona elipsa.
         Dla wartosci 0 rysowany jest obwod elipsy i jest to wartosc domyslna.
     Returns:
-        numpy.Array: Tablica RGB z narysowanym niebieski czworokatem na bialym tle
+        numpy.Array: Tablica RGB z narysowanym niebieski czworokatem na bialym tle lub cale czarne pole jezeli krawedzie czworokata sie przecinaja
         
           P2                         P3 
             #########################
@@ -163,13 +163,24 @@ def quadrilateral(n:int, m:int, P1:list, P2:list, P3:list, P4:list, fill=0) -> n
     assert n > 0, "Tablica RGB musi posiadac wartosc n wiekszy od 0"
     assert m > 0, "Tablica RGB musi posiadac wartosc m wieksza od 0"
     assert fill == 0 or fill == 1, "Wartosc fill moze przyjmowac tylko wartosci 0 lub 1"
+    assert P1[0] >= 0 and P1[0] < n and P1[1] >= 0 and P1[1] < m, "Punkt P1 musi znajdowac sie w obszarze rysowania"
+    assert P2[0] >= 0 and P2[0] < n and P2[1] >= 0 and P2[1] < m, "Punkt P2 musi znajdowac sie w obszarze rysowania"
+    assert P3[0] >= 0 and P3[0] < n and P3[1] >= 0 and P3[1] < m, "Punkt P3 musi znajdowac sie w obszarze rysowania"
+    assert P4[0] >= 0 and P4[0] < n and P4[1] >= 0 and P4[1] < m, "Punkt P4 musi znajdowac sie w obszarze rysowania"
     
-    assert P1[0] < P4[0] and P1[1] < P2[1] and (P1[0] < P3[0] and P1[1] < P3[1]), "Punkt P1 jest lewym dolnym punktem czworokata"
-    assert P2[1] > P1[1] and P1[0] < P3[0] and (P2[0] < P4[0] and P2[1] > P4[1]), "Punkt P2 jest lewym prawym punktem czworokata"
-    assert P3[0] > P2[0] and P3[1] > P4[1] and (P3[0] > P1[0] and P3[1] > P1[1]), "Punkt P3 jest prawym gornym punktem czworokata"
-    assert P4[0] > P1[0] and P4[1] < P3[1] and (P4[0] > P1[0] and P4[1] < P2[1]), "Punkt P4 jest prawym dolnym punktem czworokata"
+    RGB = np.zeros((n ,m ,3), dtype=np.uint8)
     
-    RGB = np.zeros((n,m,3), dtype=np.uint8)
+    #sprawdzanie czy krawedzie czworokata sie nie przecinaja
+    if(
+      not (P1[0] < P4[0] and P1[1] < P2[1] and (P1[0] < P3[0] and P1[1] < P3[1])) or
+      not (P2[1] > P1[1] and P1[0] < P3[0] and (P2[0] < P4[0] and P2[1] > P4[1])) or
+      not (P3[0] > P2[0] and P3[1] > P4[1] and (P3[0] > P1[0] and P3[1] > P1[1])) or
+      not (P4[0] > P1[0] and P4[1] < P3[1] and (P4[0] > P1[0] and P4[1] < P2[1]))
+      ):
+        return RGB
+        
+    
+    
     RGB.fill(255)
     
     RGB = lineXW(P1[0],P1[1],P2[0],P2[1],RGB,[0,0,255]) #AB
@@ -192,7 +203,7 @@ def quadrilateral(n:int, m:int, P1:list, P2:list, P3:list, P4:list, fill=0) -> n
                    RGB[y,x,2] = 255
     return RGB
 
-data = quadrilateral(400,400,[150,150],[100,260],[280,290],[300,100],1)
+data = quadrilateral(400,400,[150,180],[100,260],[230,250],[300,100],1)
 plt.imshow(data, interpolation='none', aspect=1)
 plt.show()
 plt.imsave('test.png', data, format='png')
