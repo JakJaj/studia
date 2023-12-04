@@ -14,8 +14,11 @@ typedef struct wezel {
   struct wezel *nastepny;
 } ksiazka;
 
-void push_back(ksiazka *nowy, ksiazka pierwszy) {//wstaw element na koniec listy
+void push_back(ksiazka *nowy, ksiazka **pierwszy) {//wstaw element na koniec listy
 
+  //tutaj trzeba pokminic bo jest inne wejscie niz w wczesniejszym push_backu
+
+  
   // konstruujemy nowy węzeł
   ksiazka* element;
   ksiazka* iterator = &pierwszy;
@@ -43,8 +46,13 @@ void push_back(ksiazka *nowy, ksiazka pierwszy) {//wstaw element na koniec listy
 
 }
 void split(const char *source, char *autor, char *tytul, char *ilosc, char *cena, char delim){
+    //wyzerowac stringi!!!
     
-    
+    *autor = '\0';
+    *tytul = '\0';
+    *ilosc = '\0';
+    *cena = '\0';
+
     while (*source != delim) { //AUTOR
          *autor = *source;
             autor++;
@@ -103,15 +111,17 @@ bool wypelnijMagazyn(const char *nazwaPliku, ksiazka **pierwszy){
        
        element->tytul = (char*) malloc((strlen(tytul) + 1) * sizeof(char));
        strcpy(element->tytul, tytul);
+       
        element->autor = (char*) malloc((strlen(autor) + 1) * sizeof(char));
        strcpy(element->autor, autor);
+       
        element->ilosc = atoi(ilosc);
        element->cena = atof(cena);
 
        //uzupelnij kod ponizej
 
        //push_back(element, &(*pierwszy));// w starszych kompilatorach
-       push_back(element, **pierwszy);
+       push_back(element, pierwszy);
        
        }
     fclose(fp);
