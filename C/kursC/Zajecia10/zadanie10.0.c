@@ -57,19 +57,17 @@ void preorder(Wezel *wezelek){
 
 Wezel *szukaj(Wezel *wezelek, int liczba){
    
-    if (wezelek->wartosc == liczba || wezelek == NULL){
-
+    if (wezelek->wartosc == liczba){
         return wezelek;
     }
 
     if(wezelek->wartosc < liczba){
-
         return szukaj(wezelek->prawy, liczba);
-
     }
-
-    return szukaj(wezelek->lewy,liczba);
-
+    
+    else{
+        return szukaj(wezelek->lewy,liczba);
+    }
 }
 
 
