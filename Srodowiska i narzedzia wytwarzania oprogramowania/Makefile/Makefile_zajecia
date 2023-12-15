@@ -1,0 +1,23 @@
+.PHONY: clean
+CC     = gcc
+CFLAGS = -Wall -ansi -pedantic
+OBJS   = hw_hello.o hw_power.o hw_main.o
+EXEC   =  hello
+
+all: $(EXEC)
+
+$(EXEC): $(OBJS)
+	$(CC) $+ -o $@
+	echo hello: zbudowany
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $<
+
+hw_main.o  : hw_defs.h hw_hello.h hw_power.h
+hw_hello.o : hw_hello.c hw_defs.h
+hw_power.o : hw_power.c hw_defs.h
+
+clean:
+	rm -f $(EXEC) $(OBJS)
+	rm -f *~
+	rm -f *.bak
