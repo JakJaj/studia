@@ -18,22 +18,24 @@
         <property name="can-focus">False</property>
         <child>
           <object class="GtkButton" id="buttonNowy">
-            <property name="label" translatable="yes">➕   Nowy </property>
+            <property name="label" translatable="yes">➕   New</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonNowy_clicked" swapped="no"/>
           </object>
         </child>
         <child>
           <object class="GtkButton" id="buttonUsun">
-            <property name="label" translatable="yes">➖  Usun</property>
+            <property name="label" translatable="yes">➖  Delete</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonUsun_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">100</property>
@@ -41,12 +43,13 @@
         </child>
         <child>
           <object class="GtkButton" id="buttonEdycja">
-            <property name="label" translatable="yes">🛠️  Edycja</property>
+            <property name="label" translatable="yes">🛠️  Modify</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonEdycja_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">200</property>
@@ -54,39 +57,27 @@
         </child>
         <child>
           <object class="GtkButton" id="buttonPromocja">
-            <property name="label" translatable="yes">🏷️ Promocja</property>
+            <property name="label" translatable="yes">🏷️ Discount</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonPromocja_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">300</property>
           </packing>
         </child>
         <child>
-          <object class="GtkTextView" id="textView">
-            <property name="width-request">400</property>
-            <property name="height-request">500</property>
-            <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="editable">False</property>
-            <property name="cursor-visible">False</property>
-          </object>
-          <packing>
-            <property name="x">430</property>
-            <property name="y">50</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkButton" id="buttonDostawa">
-            <property name="label" translatable="yes">🚚  Dostawa</property>
+            <property name="label" translatable="yes">🚚  Delivery</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonDostawa_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">500</property>
@@ -94,12 +85,13 @@
         </child>
         <child>
           <object class="GtkButton" id="buttonSprzedaz">
-            <property name="label" translatable="yes">🛒 Sprzedaz</property>
+            <property name="label" translatable="yes">🛒 Sell</property>
             <property name="width-request">100</property>
             <property name="height-request">50</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_buttonSprzedaz_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">400</property>
@@ -165,13 +157,35 @@
             <property name="primary-icon-name">edit-find-symbolic</property>
             <property name="primary-icon-activatable">False</property>
             <property name="primary-icon-sensitive">False</property>
-            <property name="placeholder-text" translatable="yes">Szukaj</property>
+            <property name="placeholder-text" translatable="yes">Search</property>
             <property name="input-purpose">alpha</property>
             <property name="input-hints">GTK_INPUT_HINT_SPELLCHECK | GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
             <signal name="search-changed" handler="on_search_search_changed" swapped="no"/>
           </object>
           <packing>
             <property name="x">600</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkViewport">
+            <property name="width-request">400</property>
+            <property name="height-request">500</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkTextView" id="textView">
+                <property name="name">textView</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap-mode">word</property>
+                <property name="cursor-visible">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">430</property>
+            <property name="y">50</property>
           </packing>
         </child>
       </object>
