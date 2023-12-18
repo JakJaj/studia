@@ -76,7 +76,6 @@
           <object class="GtkLabel" id="labelDeliveryAmount">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="label" translatable="yes">label1234</property>
           </object>
           <packing>
             <property name="x">30</property>
@@ -86,7 +85,7 @@
         <child>
           <object class="GtkViewport" id="viewDeliveryAmount">
             <property name="width-request">2</property>
-            <property name="height-request">40</property>
+            <property name="height-request">30</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>

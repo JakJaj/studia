@@ -87,7 +87,6 @@ void populate(ksiazka **magazyn, GtkTreeStore *treeStore) {
 
   GtkTreeIter iter;
   
-  
   while (iterator != NULL) {
     g_print("Setting data: Tytul=%s, Autor=%s\n", iterator->tytul, iterator->autor);
     gtk_tree_store_append(treeStore, &iter, NULL);
@@ -225,7 +224,8 @@ void displayCurrentlySelected(){
   char stringCena[30];
 
   
-  g_print("Currently selected %s %s %d %f\n", currentlySelected->autor,currentlySelected->tytul,currentlySelected->ilosc,currentlySelected->cena);
+  g_print("Currently selected %s %s %d %f\n", 
+  currentlySelected->autor,currentlySelected->tytul,currentlySelected->ilosc,currentlySelected->cena);
   
   sprintf(stringIlosc, "%d", currentlySelected->ilosc);
   sprintf(stringCena, "%5.2f", currentlySelected->cena);
@@ -252,15 +252,10 @@ void displayCurrentlySelected(){
   printf("Inserting text: %s\n", tmp);
   char *autorPosition = strstr(tmp, "Author");
 
-    // If "Autor" is found, remove the text before it
     if (autorPosition != NULL) {
-        // Calculate the length of the text to be removed
         size_t removeLength = autorPosition - tmp;
-
-        // Remove the text by shifting the remaining part to the beginning
         memmove(tmp, autorPosition, strlen(autorPosition) + 1);
     } else {
-        // "Autor" not found, handle the case accordingly
         printf("The word 'Autor' not found in the string.\n");
     }
 
@@ -284,8 +279,6 @@ void on_select_changed(GtkWidget *c){
   selected(valueTitle, valueAuthor, &magazyn);
 
   displayCurrentlySelected();
-
-  
 }
 
 void on_buttonNowy_clicked(GtkButton *b){
