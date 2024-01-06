@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 #define ZA_MALO_PAMIECI 0
+int iloscKsiazek = 0;
 
 typedef struct wezel {
   
@@ -46,7 +47,7 @@ void push_back(ksiazka *nowy, ksiazka **pierwszy) {
     }
 
     iterator->nastepny = element;
-
+    iloscKsiazek++;
 }
 void split(const char *source, char *autor, char *tytul, char *ilosc, char *cena, char *opis,char delim){
     *autor = '\0';
@@ -136,6 +137,25 @@ bool wypelnijMagazyn(const char *nazwaPliku, ksiazka **pierwszy){
     fclose(fp);
     
     return 1;
+}
+
+void deleteBook(ksiazka **pierwszy, ksiazka *element){
+    ksiazka *iterator = *pierwszy;
+    ksiazka *poprzedni = NULL;
+    while (iterator != NULL){
+        if (iterator == element){
+            if (poprzedni == NULL){
+                *pierwszy = iterator->nastepny;
+            }else{
+                poprzedni->nastepny = iterator->nastepny;
+            }
+            //free(iterator);
+            iloscKsiazek--;
+            return;
+        }
+        poprzedni = iterator;
+        iterator = iterator->nastepny;
+    }
 }
 
 

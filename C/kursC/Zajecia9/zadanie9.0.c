@@ -68,6 +68,7 @@ int main(void){
 
 while (scanf("%d", &n) != EOF) {
 
+
         push_back(&pierwszy,n);
     }
 
