@@ -1,0 +1,90 @@
+The Road Less Traveled;M. Scott Peck;15;12.990000;Psychological and spiritual guide to personal growth.
+The Outsiders;S.E. Hinton;17;9.990000;Coming-of-age novel exploring the rivalry between two groups of teenagers.
+The Sun Also Rises;Ernest Hemingway;21;10.990000;Post-World War I novel capturing the disillusionment of the "Lost Generation."
+Fahrenheit 451;Ray Bradbury;12;8.990000;Dystopian tale depicting a future society where books are banned.
+Sapiens;Yuval Noah Harari;33;11.990000;Thought-provoking exploration of human history, tracing the evolution of Homo sapiens from ancient times to the present day.
+The Handmaid's Tale;Margaret Atwood;31;13.990000;Dystopian narrative about a woman's struggle for survival in a theocratic society.
+The Old Man and the Sea;Ernest Hemingway;21;9.990000;Novella depicting an aging Cuban fisherman's battle with a giant marlin.
+The Silent Patient;Alex Michaelides;15;11.990000;Psychological thriller centered around a woman's sudden act of violence.
+The Joy Luck Club;Amy Tan;31;12.990000;Interwoven stories of Chinese-American immigrant families in the United States.
+The Road to Wigan Pier;George Orwell;16;10.990000;Social commentary on the living conditions of the working class in England.
+The Fault in Our Stars;John Green;13;11.990000;Heartbreaking romance between two teenagers dealing with cancer.
+The God of Small Things;Arundhati Roy;12;14.990000;Family saga set in post-colonial India, exploring love, caste, and social norms.
+The Poisonwood Bible;Barbara Kingsolver;17;13.990000;Tale of a missionary family's journey to the Congo and its consequences.
+The Immortal Life of Henrietta Lacks;Rebecca Skloot;21;12.990000;Nonfiction account of the impact of HeLa cells on medical science.
+The Road to Character;David Brooks;26;15.990000;Reflection on the importance of building inner character in a materialistic world.
+The Book Thief;Markus Zusak;6;11.990000;Narrated by Death, this novel tells the story of a girl in Nazi Germany.
+The Martian;Andy Weir;7;14.990000;Science fiction novel about an astronaut stranded on Mars and his fight for survival.
+The Girl on the Train;Paula Hawkins;19;10.990000;Thriller revolving around a woman who becomes entangled in a missing person's investigation.
+The Nightingale;Kristin Hannah;5;13.990000;Historical fiction set during World War II, focusing on two sisters in France.
+The Art of War;Sun Tzu;14;8.990000;Ancient Chinese treatise on military strategy and tactics.
+The Count of Monte Cristo;Alexandre Dumas;26;15.990000;Adventure novel of betrayal, revenge, and redemption in 19th-century France.
+The Three Musketeers;Alexandre Dumas;9;11.990000;Classic adventure tale of friendship and intrigue in 17th-century France.
+The Road Not Taken;Robert Frost;12;7.990000;Collection of poems by the renowned American poet.
+The Picture of Dorian Gray;Oscar Wilde;16;10.990000;Philosophical novel exploring the consequences of a life of excess and vanity.
+The Glass Castle;Jeanette Walls;26;12.990000;Memoir depicting the author's unconventional and challenging childhood.
+The Circle;Dave Eggers;12;13.990000;Dystopian novel exploring the implications of a powerful tech company's influence.
+The Immortalists;Chloe Benjamin;11;11.990000;Novel following four siblings who learn the dates of their deaths from a fortune teller.
+The Big Short;Michael Lewis;14;14.990000;Nonfiction account of the 2008 financial crisis and those who saw it coming.
+The Night Circus;Erin Morgenstern;12;12.990000;Fantasy novel set in a magical competition between two illusionists.
+The Help;Kathryn Stockett;16;11.990000;Historical novel exploring the lives of African American maids in 1960s Mississippi.
+The Immortal Rules;Julie Kagawa;6;9.990000;Young adult novel set in a dystopian world where vampires rule.
+The Goldfinch;Donna Tartt;7;14.990000;Pulitzer Prize-winning novel about a young boy's journey after a tragedy.
+The Wind-Up Bird Chronicle;Haruki Murakami;19;13.990000;Surreal and mysterious novel exploring a man's search for his missing wife.
+The Catcher in the Rye;J.D. Salinger;6;11.990000;Coming-of-age novel following Holden Caulfield's adventures in New York City.
+The Hobbit;J.R.R. Tolkien;7;14.990000;Fantasy classic featuring the journey of Bilbo Baggins.
+The Girl with the Dragon Tattoo;Stieg Larsson;7;29.990000;Thriller featuring journalist Mikael Blomkvist and hacker Lisbeth Salander.
+The Hunger Games;Suzanne Collins;2;26.990000;Dystopian trilogy following Katniss Everdeen's fight for survival.
+The Alchemist;Paulo Coelho;16;9.990000;Philosophical novel about a shepherd's journey to find his personal legend.
+Brave New World;Aldous Huxley;14;10.990000;Dystopian vision of a future society controlled by technology.
+The Da Vinci Code;Dan Brown;26;39.990000;Mystery thriller involving symbologist Robert Langdon.
+The Shining;Stephen King;2;21.990000;Horror novel set in the haunted Overlook Hotel.
+The Road;Cormac McCarthy;7;12.990000;Post-apocalyptic journey of a father and son through a desolate landscape.
+Gone with the Wind;Margaret Mitchell;12;14.990000;Epic tale set during the American Civil War and Reconstruction.
+Crime and Punishment;Fyodor Dostoevsky;17;10.990000;Psychological novel exploring morality and guilt.
+The Odyssey;Homer;14;12.990000;Ancient Greek epic poem following Odysseus' journey home.
+The Brothers Karamazov;Fyodor Dostoevsky;17;14.990000;Philosophical novel examining the nature of faith and doubt.
+The Scarlet Letter;Nathaniel Hawthorne;12;8.990000;Classic tale of sin, guilt, and redemption in Puritan New England.
+The Master and Margarita;Mikhail Bulgakov;13;13.990000;Satirical novel blending fantasy and reality in Soviet Moscow.
+The Sound and the Fury;William Faulkner;23;9.990000;Modernist novel exploring the Compson family's decline in the South.
+The Stranger;Albert Camus;11;10.990000;Existentialist novel examining the absurdity of human existence.
+One Hundred Years of Solitude;Gabriel García Márquez;6;12.990000;Magical realist saga of the Buendía family in Macondo.
+Beloved;Toni Morrison;21;14.990000;Powerful novel addressing the legacy of slavery in post-Civil War America.
+The Grapes of Wrath;John Steinbeck;11;18.990000;Powerful story of the Joad family during the Great Depression.
+The Name of the Wind;Patrick Rothfuss;13;19.990000;Fantasy novel chronicling the life of the legendary Kvothe.
+The Shadow of the Wind;Carlos Ruiz Zafón;3;12.990000;Mystery novel set in post-war Barcelona centered around a forgotten book.
+The Great Gatsby;F. Scott Fitzgerald;5;17.990000;Jazz Age tale of wealth, love, and tragedy.
+To Kill a Mockingbird;Harper Lee;26;10.990000;Classic novel addressing racial injustice in the American South.
+1984;George Orwell;17;12.990000;Dystopian novel depicting a totalitarian future society.
+The Lord of the Rings;J.R.R. Tolkien;3;19.990000;Epic fantasy trilogy following the quest to destroy the One Ring.
+Pride and Prejudice;Jane Austen;2;8.990000;Classic romance novel exploring social class and love.
+The Chronicles of Narnia;C.S. Lewis;7;19.990000;Fantasy series chronicling the adventures in the magical land of Narnia.
+The Kite Runner;Khaled Hosseini;16;15.990000;Emotional novel set in Afghanistan exploring friendship and redemption.
+Wuthering Heights;Emily Brontë;8;14.990000;Passionate tale of love and revenge on the Yorkshire moors.
+The Immortal Life of Henrietta Lacks;Rebecca Skloot;6;16.990000;Nonfiction account of the impact of HeLa cells on medical science.
+The Hagwood Books;Robin Jarvis;15;15.990000;An enchanting series by Robin Jarvis that delves into the magical world of Hagwood, where dark secrets, ancient powers, and mystical creatures await.
+The Halfblood Chronicles;Mercedes Lackey and Andre Norton;10;12.990000;A collaborative effort by Mercedes Lackey and Andre Norton, this series explores a world where magic, politics, and half-human, half-elf characters collide.
+Haroun and the Sea of Stories;Salman Rushdie;3;5.990000;Salman Rushdie weaves a whimsical tale in this book, where young Haroun embarks on a fantastical journey through a sea of stories to save his father's storytelling abilities.
+Harry Potter and the Chamber of Secrets;J. K. Rowling;12;19.990000;In the second book of the series, Harry Potter returns to Hogwarts, facing new challenges and uncovering the mystery of the Chamber of Secrets.
+Harry Potter and the Prisoner of Askaban;J. K. Rowling;12;19.990000;The third book follows Harry as he learns more about his family's past and confronts dangerous adversaries, including the notorious prisoner Sirius Black.
+Harry Potter and the Goblet of Fire;J. K. Rowling;12;19.990000;The fourth book sees Harry competing in the Triwizard Tournament, facing unexpected dangers and uncovering a sinister plot that threatens the wizarding world.
+Harry Potter and the Order of Phoenix;J. K. Rowling;12;19.990000;As Voldemort returns, Harry faces challenges and dangers in his fifth year at Hogwarts, dealing with the ominous Order of the Phoenix.
+Harry Potter and the Half Blood Prince;J. K. Rowling;12;19.990000;In the penultimate book, Harry learns about Voldemort's past and the importance of the Horcruxes, leading to a climactic confrontation.
+Harry Potter and the Deathly Hallows;J. K. Rowling;12;19.990000;The final installment of the Harry Potter series follows Harry's quest to destroy the remaining Horcruxes and face Voldemort in an epic battle for the wizarding world.
+Hart's Hope;Orson Scott Card;3;14.990000;Orson Scott Card crafts a tale of power, revenge, and redemption in this fantasy novel set in the land of Hart's Hope.
+The Haunted Woman;David Lindsay;10;14.990000;David Lindsay's mysterious and haunting tale explores the supernatural as a woman grapples with eerie occurrences and a haunting presence.
+The Haunting of Hill House;Shirley Jackson;11;14.990000;Shirley Jackson's classic horror novel delves into the psychological terror within the walls of Hill House, where dark secrets and malevolent forces lurk.
+The Heart of What Was Lost;Tad Williams;4;15.000000;Set in the world of Memory, Sorrow, and Thorn, Tad Williams' novella explores the aftermath of war, loss, and the search for redemption.
+The Heavenly Fox;Richard Parks;5;18.990000;Richard Parks weaves a tale inspired by Japanese folklore, featuring mythical creatures and the intertwining of human and supernatural destinies.
+Here Comes the Sun;Tom Holt;7;11.950000;Tom Holt's comedic novel takes a humorous look at the life of the sun god as he navigates divine responsibilities and the challenges of ruling the heavens.
+Hereafter, and After;Richard Parks;7;15.990000;In this collection of short stories, Richard Parks explores various fantastical realms, offering glimpses into the afterlife and the consequences of otherworldly encounters.
+Heroes of the Valley;Jonathan Stroud;11;12.990000;Jonathan Stroud's novel follows the adventures of Halli, a young hero-in-the-making, as he embarks on a journey filled with myths, legends, and unexpected twists.
+The Heroes of Olympus;Rick Riordan;15;14.990000;Rick Riordan expands the Percy Jackson universe in this series, bringing together Greek and Roman demigods in a quest to save the world from ancient evils.
+The Hill of Dreams;Arthur Machen;10;9.990000;Arthur Machen's semi-autobiographical novel explores the blurred line between reality and fantasy as a young writer grapples with the allure of dreams and the harshness of life.
+His Dark Materials series;Philip Pullman;2;39.990000;Philip Pullman's epic trilogy, including "The Golden Compass," "The Subtle Knife," and "The Amber Spyglass," explores parallel worlds, daemons, and the struggle between authority and freedom.
+The Hounds of the Morrigan;Pat O'Shea;11;24.990000;Pat O'Shea's captivating tale draws on Celtic mythology, following two siblings as they become entwined in a battle against the ancient goddess, the Morrigan.
+The House on the Borderland;William Hope Hodgson;15;25.990000;William Hope Hodgson's novel blends horror and fantasy, recounting the eerie experiences of a recluse in a remote house plagued by supernatural occurrences.
+House of Night;P.C. Cast;10;12.990000;P.C. Cast's series follows the journey of Zoey Redbird as she navigates the challenges of being a fledgling vampyre in a world filled with magic, danger, and dark secrets.
+The House with a Clock in Its Walls;John Bellairs;3;5.990000;John Bellairs' classic children's book introduces readers to the magical world of Lewis Barnavelt, where a mysterious clock holds the key to powerful and dangerous forces.
+Howl's Moving Castle;Diana Wynne Jones;12;29.990000;Diana Wynne Jones' enchanting novel follows the adventures of Sophie, a young woman cursed to an old age, as she joins the eccentric wizard Howl on a journey filled with magic, love, and self-discovery.
+The Hundred Thousand Kingdoms;N. K. Jemisin;3;13.990000;N. K. Jemisin's debut novel is a rich tapestry of gods, politics, and family intrigue as Yeine Darr navigates a complex world of power and betrayal.
