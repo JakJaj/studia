@@ -1,41 +1,42 @@
 document.getElementById('dynamicForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    var inputCount = parseInt(document.getElementById('inputCount').value);
-    benchmark(inputCount);
+    let numberPassed = parseInt(document.getElementById('numberPassed').value);
+    benchmark(numberPassed);
+
 });
 
-function benchmark(inputCount) {
-    var startTime, endTime;
+function benchmark(numberPassed) {
+    let start, end;
 
-    // Creation
-    startTime = performance.now();
-    createInputFields(inputCount);
-    endTime = performance.now();
-    document.getElementById('creationTime').textContent = (endTime - startTime).toFixed(2);
+    // Tworzenie
+    start = performance.now();
+    createInputFields(numberPassed);
+    end = performance.now();
+    document.getElementById('creationTime').textContent = (end - start).toFixed(2);
 
-    // Writing
-    startTime = performance.now();
+    // Pisanie
+    start = performance.now();
     writeInputValues();
-    endTime = performance.now();
-    document.getElementById('writingTime').textContent = (endTime - startTime).toFixed(2);
+    end = performance.now();
+    document.getElementById('writingTime').textContent = (end - start).toFixed(2);
 
-    // Reading
-    startTime = performance.now();
+    // Czytanie
+    start = performance.now();
     readInputValues();
-    endTime = performance.now();
-    document.getElementById('readingTime').textContent = (endTime - startTime).toFixed(2);
+    end = performance.now();
+    document.getElementById('readingTime').textContent = (end - start).toFixed(2);
 
-    // Deletion
-    startTime = performance.now();
+    // Usuwanie
+    start = performance.now();
     deleteInputFields();
-    endTime = performance.now();
-    document.getElementById('deletionTime').textContent = (endTime - startTime).toFixed(2);
+    end = performance.now();
+    document.getElementById('deletionTime').textContent = (end - start).toFixed(2);
 }
 
 function createInputFields(count) {
-    var form = document.getElementById('dynamicForm');
-    for (var i = 0; i < count; i++) {
-        var input = document.createElement('input');
+    let form = document.getElementById('tempForm');
+    for (let i = 0; i < count; i++) {
+        let input = document.createElement('input');
         input.type = 'text';
         input.name = 'inputField';
         form.appendChild(input);
@@ -43,22 +44,22 @@ function createInputFields(count) {
 }
 
 function writeInputValues() {
-    var inputs = document.getElementsByName('inputField');
-    for (var i = 0; i < inputs.length; i++) {
+    let inputs = document.getElementsByName('inputField');
+    for (let i = 0; i < inputs.length; i++) {
         inputs[i].value = 'Value ' + (i + 1);
     }
 }
 
 function readInputValues() {
-    var inputs = document.getElementsByName('inputField');
-    for (var i = 0; i < inputs.length; i++) {
-        var value = inputs[i].value;
+    let inputs = document.getElementsByName('inputField');
+    for (let i = 0; i < inputs.length; i++) {
+        let value = inputs[i].value;
         console.log('Input ' + (i + 1) + ': ' + value);
     }
 }
 
 function deleteInputFields() {
-    var form = document.getElementById('dynamicForm');
+    let form = document.getElementById('tempForm');
     while (form.firstChild) {
         form.removeChild(form.firstChild);
     }
