@@ -1,0 +1,11 @@
+html{
+    font-size: 150%;
+    background-color: rgba(33,37,41);
+}
+
+.formularz{
+    border: #495057 solid  3px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
