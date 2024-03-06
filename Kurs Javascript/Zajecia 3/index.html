@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konwerter jednostek</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Masa</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Dlugosc</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Temperatura</a></li>
+        </ul>
+        </header>
+    </div>
+    <div class="title container my-5" >
+        <h1 class="text-center">Konwerter jednostek</h1>
+        <h2 class="text-center" id="title-text">Masa</h2>
+    </div>
+    <div class="container">
+        <div>
+        <h1>Wybierz pierwsza jednostke</h1>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle drop" type="button" data-bs-toggle="dropdown"  id="firstUnit" aria-expanded="false">
+            Pierwsza jednostka
+            </button>
+            
+            
+            
+            <ul class="dropdown-menu" id="firstUnitList">
+            </ul>
+            <p class="text-danger rounded-3" id="firstUnitError"></p>
+
+            <input type="number" class="form-control form-control-lg mt-5" id="firstInput" placeholder="0.00">
+            <p class="text-danger rounded-3" id="inputError"></p>
+
+        </div>
+        <div class="my-5">
+            <h1>Wybierz druga jednostke</h1>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle drop" type="button" data-bs-toggle="dropdown" id="secondUnit" aria-expanded="false">
+                Druga jednostka
+                </button>
+
+                <ul class="dropdown-menu" id="secondUnitList">
+                </ul>
+
+                <p class="text-danger rounded-3" id="secondUnitError"></p>
+            </div>
+        </div>
+        <div>
+            <!--TODO: ZROBIC RANGE KTORYM BEDZIE SIE WYBIERALO ILOSC MIEJSC PO PRZECINKU-->
+            <label for="customRange3" class="form-label">Liczba miejsc po przecinku</label>
+            <input type="range" class="form-range" min="0" max="3" step="0.5" id="customRange3">
+            <p id="rangeValue">Aktualna wartość: <span id="rangeDisplay">0</span></p>
+
+        </div>
+        <div class="my5 d-flex justify-content-center">
+            <button type="button" id="convertButton" class="btn btn-primary">Przelicz</button>
+        </div>
+
+        <div class="my-5 d-flex justify-content-center">
+            <h1>Wynik:</h1>
+        </div>
+
+        <div id="result">
+            <p>Wybierz jednostki a nastepnie wcisnij przelicz aby otrzymac wynik konwersji</p>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
