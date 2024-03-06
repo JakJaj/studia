@@ -1,0 +1,15 @@
+.title{
+    font-size: 5 rem;
+}
+
+.dropdown > button{
+    font-size: 1.5rem;   
+}
+
+p{
+    font-size: 2rem;
+}
+
+#result{
+    font-size: 3rem;
+}
