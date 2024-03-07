@@ -27,17 +27,17 @@
             <button class="btn btn-secondary dropdown-toggle drop" type="button" data-bs-toggle="dropdown"  id="firstUnit" aria-expanded="false">
             Pierwsza jednostka
             </button>
-            
-            
-            
+
             <ul class="dropdown-menu" id="firstUnitList">
             </ul>
+            
             <p class="text-danger rounded-3" id="firstUnitError"></p>
 
             <input type="number" class="form-control form-control-lg mt-5" id="firstInput" placeholder="0.00">
             <p class="text-danger rounded-3" id="inputError"></p>
 
         </div>
+
         <div class="my-5">
             <h1>Wybierz druga jednostke</h1>
             <div class="dropdown">
@@ -51,13 +51,12 @@
                 <p class="text-danger rounded-3" id="secondUnitError"></p>
             </div>
         </div>
-        <div>
-            <!--TODO: ZROBIC RANGE KTORYM BEDZIE SIE WYBIERALO ILOSC MIEJSC PO PRZECINKU-->
-            <label for="customRange3" class="form-label">Liczba miejsc po przecinku</label>
-            <input type="range" class="form-range" min="0" max="3" step="0.5" id="customRange3">
-            <p id="rangeValue">Aktualna wartość: <span id="rangeDisplay">0</span></p>
 
+        <div>
+            <input type="range" class="form-range" min="0" max="6" step="1" id="range">
+            <p id="rangeValue">Liczba miejsc po przecinku: <span id="rangeDisplay">3</span></p>
         </div>
+
         <div class="my5 d-flex justify-content-center">
             <button type="button" id="convertButton" class="btn btn-primary">Przelicz</button>
         </div>
