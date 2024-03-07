@@ -4,25 +4,26 @@ $(document).ready(function() {
     var firstUnit = null;
     var secondUnit = null;
     var input = NaN;
+    var precision = 3;
     changeDropdownList(selectedConversion);
 
 
-    //Sprawdzenie czy wybrano jednostki i konwersja
+    //wcisniecie przycisku konwertuj
     $("#convertButton").click(function(){
         input = parseFloat($("#firstInput").val());
         if(checkForEmptyFields(firstUnit, secondUnit, input)){
         
             switch(selectedConversion){
                 case "Masa":
-                    massConversion(firstUnit, secondUnit);
+                    massConversion(firstUnit, secondUnit, precision);
                     console.log("Masa");        
                     break;
                 case "Dlugosc":
-                    lengthConversion(firstUnit,secondUnit);
+                    lengthConversion(firstUnit,secondUnit, precision);
                     console.log("Dlugosc");
                     break;
                 case "Temperatura":
-                    temperatureConversion(firstUnit, secondUnit);
+                    temperatureConversion(firstUnit, secondUnit, precision);
                     console.log("Temperatura");
                     break;
                 default:
@@ -30,6 +31,7 @@ $(document).ready(function() {
             }
         }
     })
+    //zmiana typu konwersji
     $(".nav-item > a").click(function() {
         $(".nav-item > a").removeClass("active");
         $(this).addClass("active");
@@ -39,6 +41,7 @@ $(document).ready(function() {
         changeDropdownList(selectedConversion);
     });
 
+    //zmiana jednostki w dropdownie
     $(document).on('click', '.dropdown-item', function() {
         var dropdownButton = $(this).closest('.dropdown').find('.dropdown-toggle');
         dropdownButton.text($(this).text());
@@ -53,8 +56,13 @@ $(document).ready(function() {
         }
         
     });
+    $("#range").on("input", function(){
+        $("#rangeDisplay").text($(this).val());
+        precision = $(this).val();
+    });
 });
 
+//zmiana listy jednostek w zależności od wybranej konwersji
 function changeDropdownList(selectedConversion){
     var firstUnitList = $("#firstUnitList");
     var secondUnitList = $("#secondUnitList");
@@ -103,7 +111,8 @@ function changeDropdownList(selectedConversion){
     }
 }
 
-function massConversion(firstUnit, secondUnit){
+//konwersja masy
+function massConversion(firstUnit, secondUnit, precision){
         var firstValue = parseFloat($("#firstInput").val());
         var result = 0;
 
@@ -149,11 +158,12 @@ function massConversion(firstUnit, secondUnit){
             }
         }
 
-        $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(5) + ": " + secondUnit);
+        $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(precision) + ": " + secondUnit);
     
 }
 
-function lengthConversion(firstUnit, secondUnit) {
+//konwersja dlugosci
+function lengthConversion(firstUnit, secondUnit, precision) {
     var firstValue = parseFloat($("#firstInput").val());
     var result = 0;
     if (firstUnit === "Metr") {
@@ -197,10 +207,11 @@ function lengthConversion(firstUnit, secondUnit) {
             result = firstValue;
         }
     }
-    $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(5) + ": " + secondUnit);
+    $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(precision) + ": " + secondUnit);
 }
 
-function temperatureConversion(firstUnit, secondUnit) {
+//konwersja temperatury
+function temperatureConversion(firstUnit, secondUnit, precision) {
     var firstValue = parseFloat($("#firstInput").val());
     var result = 0;
     if (firstUnit === "Celsjusz") {
@@ -228,9 +239,10 @@ function temperatureConversion(firstUnit, secondUnit) {
             result = firstValue;
         }
     }
-    $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(5) + ": " + secondUnit);
+    $("#result").text(firstValue + " " + firstUnit + " to: " + result.toFixed(precision) + ": " + secondUnit);
 }
 
+//sprawdzenie czy wszystkie pola sa wypelnione
 function checkForEmptyFields(firstUnit, secondUnit, input){
     if(firstUnit == null){
         $("#firstUnitError").text("Nie wybrano jednostki")
