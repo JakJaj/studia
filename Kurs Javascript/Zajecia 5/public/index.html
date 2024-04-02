@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>System Information Dashboard</h1>
+        <h2>Details: </h2>
+        <hr>
+        <div class="details">
+            <div id="os-details">
+                <h2>Operating System</h2>
+                <p id="os-name"></p>
+            </div>
+            <hr>
+            <div id="cpu-details">
+                <h2>CPU</h2>
+                <p id="cpu-model"></p>
+                <p id="cpu-cores"></p>
+            </div>
+            <hr>
+            <div id="memory-details">
+                <h2>Memory</h2>
+                <p id="total-memory"></p>
+            </div>
+            <hr>
+            <div id="battery">
+                <h2>Battery</h2>
+                <p id="battery-charge"></p>
+            </div>
+        </div>
+        <hr>
+        <h2>Current usage:</h2>
+        <div class="info">
+            <div id="cpu-info">
+                <h2>CPU Usage</h2>
+                <p id="cpu-usage"></p>
+                <canvas id="cpu-chart"></canvas>
+            </div>
+            <div id="memory-info">
+                <h2>Memory Usage</h2>
+                <p id="memory-usage"></p>
+                <canvas id="memory-chart"></canvas>
+            </div>
+            <div id="temperature-info">
+                <h2>Temperature</h2>
+                <p id="temperature"></p>
+                <canvas id="temperature-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
