@@ -1,0 +1,1 @@
+UPDATE glosowanie.data SET votes = votes + 1 WHERE id = ${index + 1}
