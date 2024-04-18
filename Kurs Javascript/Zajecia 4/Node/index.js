@@ -4,13 +4,13 @@ import { fileURLToPath } from "url";
 import qr from "qr-image";
 import fs from "fs";
 import bodyParser from "body-parser";
+import { freemem } from "os";
 
 const port = 3000;
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(bodyParser.urlencoded({extended: true}));
-
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');

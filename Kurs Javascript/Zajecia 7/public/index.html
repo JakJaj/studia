@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Vote for the country with the best cousine</h1>
+    </header>
+
+    <div class="container flex">
+        <div class="connected"></div>
+        <canvas id="myChart"></canvas>
+
+        <div class="buttons">
+            <button data-index="0">Italian</button>
+            <button data-index="1">Indian</button>
+            <button data-index="2">Spanish</button>
+            <button data-index="3">Chinese</button>
+            <button data-index="4">Japanese</button>
+            <button data-index="5">Mexican</button>
+        </div>
+
+        <br>
+        <div class="flex">
+            <input type="text" placeholder="Passcode" class="input" id="passcode"></input>
+            <input type="submit" class="input" id="submit"> </input>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
