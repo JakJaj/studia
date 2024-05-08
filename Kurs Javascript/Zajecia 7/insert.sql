@@ -1,4 +1,4 @@
-// codes
+ -- codes
 INSERT INTO codes (code) VALUES ('1121');
 INSERT INTO codes (code) VALUES ('3141');
 INSERT INTO codes (code) VALUES ('5161');
@@ -30,7 +30,7 @@ INSERT INTO codes (code) VALUES ('8437');
 INSERT INTO codes (code) VALUES ('2918');
 INSERT INTO codes (code) VALUES ('7065');
 
-// data
+ -- data
 
 INSERT INTO data (country, votes) VALUES ('Italian', 16);
 INSERT INTO data (country, votes) VALUES ('Indian', 24);
