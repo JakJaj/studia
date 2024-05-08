@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <label>
+    House Surface:
+    <input type="number" formControlName="surface">
+  </label>
+  <label>
+    Heating Method:
+    <select formControlName="heatingMethod">
+      <!-- Add options for each heating method -->
+    </select>
+  </label>
+  <label>
+    Current Bill:
+    <input type="number" formControlName="currentBill">
+  </label>
+</form>
+<div>
+  Calculation Result: {{ calculationResult }}
+</div>

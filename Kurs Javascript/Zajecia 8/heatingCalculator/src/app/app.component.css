@@ -1,0 +1,74 @@
+.center {
+    display: flex;
+    justify-content: center;
+    height: 55vh;
+  }
+  
+  .forms{
+    background-color: slategray;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-logo{
+    width: 80px;
+    height: 80px;
+  }
+  .brand-name{
+    display: flex; 
+    justify-content: space-evenly
+  }
+
+  .results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: slategray;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  
+  }
+html{
+  background-color: lightslategrey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #4C8F50;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+input{
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px ;
+  width: 400px;
+}
+
+select{
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px ;
+  width: 450px;
+}
