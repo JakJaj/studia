@@ -1,0 +1,190 @@
+html{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #ccc;
+    background-color: #333;
+
+}
+
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.popupBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #444;
+    background-color: #444;
+    border-radius: 19px;
+    width: 500px;
+    height: 400px;
+}
+
+.popupButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid darkgreen;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 19px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+
+}
+.popupButton:hover{
+    background-color: darkslategray;
+    border: 1px solid darkslategray;
+    margin: 9px;
+    padding: 20px;
+}
+
+
+.popupBox input{
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid white;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.actionPanel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #444;
+    border-radius: 19px;
+}
+
+
+.actionPanel button{
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid darkgreen;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+.task{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 3px solid palevioletred;
+    color: darkred;
+    border-radius: 5px;
+    background-color: pink;
+    width: 700px;
+}
+
+.taskPanelPlacement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.taskPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    width: 70%;
+
+}
+.taskText{
+    display: inline-block;
+    width: 80%;
+    padding-right: 10px;
+    text-align: left;
+
+}
+.taskList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 100px;
+    border: 1px solid #444;
+    background-color: #444;
+    border-radius: 19px;
+}
+
+.taskButton{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: right;
+}
+
+
+.done{
+    text-decoration: line-through;
+    color: darkslategray;
+    background-color:aquamarine;
+    border: 3px solid aqua;
+}
+
+
+
+.taskButton button{
+    padding: 5px;
+    margin: 5px;
+    border: 10px solid palevioletred;
+    border-radius: 5px;
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+
+}
+
+.taskButton button:hover{
+    background-color: darkred;
+    border : 10px solid darkred;
+}
+
+.taskButton.buttonDone button{
+    background-color: green;
+    border: 10px solid green;
+}
+
+.taskButton.buttonDone button:hover{
+    background-color: darkslategray;
+    border: 10px solid darkslategray;
+}
+
+.deleteButton button{
+    background-color: red;
+    border: 10px solid red;
+}
+
+.deleteButton button:hover{
+    background-color: darkred;
+    border: 10px solid darkred;
+}
