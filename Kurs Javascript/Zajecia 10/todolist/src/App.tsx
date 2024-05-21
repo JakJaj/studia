@@ -1,44 +1,27 @@
 import './App.css'
 import trashCan from '/trash.svg'
 import check from '/check.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+interface Task {
+  name: string;
+  description: string;
+  done: boolean;
+  id: number;
+}
 
 function App() {
+  //TODO: szyfrowanie zadań
+  
 
-
-  const data = [{
-    id: 1,
-    name: 'sprzatanie',
-    description: 'posprzątać samochód',
-    done: false
-  },
-  {
-    id: 2,
-    name: 'sprzatanie',
-    description: 'posprzątać samochód',
-    done: true
-  },
-  {
-    id: 3,
-    name: 'sprzatanie',
-    description: 'posprzątać samochód',
-    done: false
-  },
-  {
-    id: 4,
-    name: 'sprzatanie',
-    description: 'posprzątać samochód fdfdfdf asdf asdf asdf asdf asdf asdf df fdsa fdaszxc fasd asdf zxcv as dfvxcz asdf zxcv ',
-    done: false
-  },
-  {
-    id: 5,
-    name: 'sprzatanie',
-    description: 'posprzątać samochód',
-    done: true
-  }]
-
-
-  const [tasks, setTasks] = useState(data)
+  const [tasks, setTasks] = useState<Task[]>([]);
+  useEffect(() => {
+    fetch('http://localhost:3000/api/gettasks')
+      .then(response => response.json())
+      .then(data => {
+      //console.log(data)
+      setTasks(data.tasks)
+    });
+  }, []);
 
   const taskList = tasks.map(task => 
     <Task taskName={task.name} taskDescription={task.description} taskDone={task.done} id={task.id} key={task.id} />
@@ -88,10 +71,16 @@ function App() {
         description: taskDescription,
         done: false
       }
-      setTasks([...tasks, newTask]);
+      const updatedTasks = [...tasks, newTask];
+      
+      setTasks(updatedTasks);
+      saveData(updatedTasks);
+      console.log(updatedTasks);
+      
       setTaskName('');
       setTaskDescription('');
       setIsOpen(false);
+      
     }
 
     return(
@@ -147,13 +136,16 @@ function App() {
       if (task) {
         task.done = !task.done;
       }
-    
+      saveData(tasks);
       setTasks(newTasks);
+      console.log(tasks);
+      
     }
 
     function deleteTask() {
       const newTasks = tasks.filter(task => task.id !== id);
-      setTasks(newTasks);
+      saveData(newTasks);
+      setTasks(newTasks); 
     }
 
       return(
@@ -171,6 +163,16 @@ function App() {
         </div>
       );
     }
+}
+
+function saveData(data: Task[]) {
+  fetch('http://localhost:3000/api/addtasks', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ tasks: data })
+  });
 }
 
 export default App
