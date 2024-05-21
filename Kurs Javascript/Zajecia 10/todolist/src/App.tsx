@@ -2,7 +2,6 @@ import './App.css'
 import trashCan from '/trash.svg'
 import check from '/check.svg'
 import { useState } from 'react'
-import Popup from 'reactjs-popup'
 
 function App() {
 
@@ -78,6 +77,11 @@ function App() {
     }
 
     function addTask() {
+
+      if (taskName === '') {
+        return;
+      }
+
       const newTask = {
         id: tasks.length + 1,
         name: taskName,
@@ -87,6 +91,7 @@ function App() {
       setTasks([...tasks, newTask]);
       setTaskName('');
       setTaskDescription('');
+      setIsOpen(false);
     }
 
     return(
@@ -101,7 +106,7 @@ function App() {
                 <input 
                   type='text'
                   className='popupInput' 
-                  placeholder='Nazwa zadania'
+                  placeholder='Nazwa zadania (wymagana)'
                   value={taskName}
                   onChange={handleNameChange}>
                 </input>
@@ -113,11 +118,7 @@ function App() {
                   onChange={handleDescriptionChange}>
                   </input>
 
-                <button onClick={
-                  () => {
-                    addTask(); 
-                    setIsOpen(false)}
-                    }
+                <button onClick={addTask}
                     className='popupButton'>
                       Dodaj zadanie
                 </button>
