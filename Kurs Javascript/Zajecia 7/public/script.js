@@ -32,14 +32,21 @@ const myChart = new Chart(ctx, {
     data: chartData
 });
 
-buttons.forEach(b=>{
-    
-    b.onclick = ()=>{
-        buttons.forEach(b=> b.classList.remove('picked'));
-        b.classList.add('picked');
-        selected = b.dataset.index;
+function* buttonGenerator(buttons) { // generator przycisków
+    for (let i = 0; i < buttons.length; i++) {
+        yield buttons[i];
+    }
+}
+
+let buttonIterator = buttonGenerator(buttons); // iterator przycisków
+
+for (let button of buttonIterator) {
+    button.onclick = () => {
+        buttons.forEach(b => b.classList.remove('picked'));
+        button.classList.add('picked');
+        selected = button.dataset.index;
     };
-});
+}
 
 submit.onclick = ()=>{
 
