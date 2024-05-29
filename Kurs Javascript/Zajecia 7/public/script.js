@@ -40,7 +40,7 @@ function* buttonGenerator(buttons) { // generator przycisków
 
 let buttonIterator = buttonGenerator(buttons); // iterator przycisków
 
-for (let button of buttonIterator) {
+for (let button of buttonIterator) { // for of
     button.onclick = () => {
         buttons.forEach(b => b.classList.remove('picked'));
         button.classList.add('picked');
@@ -48,7 +48,7 @@ for (let button of buttonIterator) {
     };
 }
 
-submit.onclick = ()=>{
+submit.onclick = ()=>{ //funkcja strzalkowa
 
     console.log(keys);
     console.log(passcode.value);
@@ -74,7 +74,7 @@ submit.onclick = ()=>{
     console.log(keys);
 
     chartData.datasets[0].data[selected] += 1;
-    buttons.forEach(b=> b.disabled = true);
+    buttons.forEach(b=> b.disabled = true); //funckja strzalkowa
     ws.send(JSON.stringify({data:chartData.datasets[0].data, keys:keys}));
     
     selected = -1;
@@ -84,19 +84,19 @@ submit.onclick = ()=>{
 // Websocket
 const ws = new WebSocket('ws://localhost:8080');
 
-ws.addEventListener('open', ()=>{
+ws.addEventListener('open', ()=>{ //Funkcja strzalkowa
     console.log('Connection opened.');
     connected.textContent = 'You can now vote!';
     connected.classList.add('active');
 });
 
-ws.addEventListener('close',()=>{
+ws.addEventListener('close',()=>{ //Funkcja strzalkowa
     console.log('Disconnected.');
     connected.textContent = 'Refresh a page to vote!';
     connected.classList.remove('active');
 });
 
-ws.addEventListener('message', e =>{
+ws.addEventListener('message', e =>{ //Funkcja strzalkowa
     let {data} = e;
     let newData = JSON.parse(data);
     newData.data.forEach((d, index)=>{
